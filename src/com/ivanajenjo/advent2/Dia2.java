@@ -14,7 +14,11 @@ public class Dia2 {
                 String data = myReader.nextLine();
                 elArray[i++] = data;
             }
-            for (int j = 0; j < elArray.length; j++) {
+            for (String line:elArray) {
+                String[] splitted = line.split(String.valueOf(':'));
+                String politica = splitted[0];
+                String password = splitted[1];
+                String rangos = politica.split(String.valueOf(' '))[0];
             }
         }catch (Exception e){
             System.out.println("No se encuentra el archivo");
